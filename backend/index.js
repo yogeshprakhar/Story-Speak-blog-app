@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRoutes from "./routes/user.route.js";
-import authRoutes from "./routes/auth.route.js"
+import authRoutes from "./routes/auth.route.js";
 
 dotenv.config();
 
@@ -12,11 +12,17 @@ mongoose
   .catch(() => console.log("error while connecting database"));
 
 const app = express();
-app.use(express.json())
+app.use(express.json());
 
 app.listen(9000, () => {
   console.log("Server running at port 9000");
 });
 
 app.use("/api/user", userRoutes);
-app.use("/spi/auth", authRoutes)
+app.use("/spi/auth", authRoutes);
+
+app.use((err, req, res, next) => {
+  const statusCode = err.statusCode || 500;
+  const message = err.message || "Internal server error";
+  res.status(statusCode).json({ success: false, statusCode, message });
+});

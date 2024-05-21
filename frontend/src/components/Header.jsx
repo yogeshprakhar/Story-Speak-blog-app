@@ -9,7 +9,7 @@ import { toogleTheme } from "../redux/theme/themeSlice";
 const Header = () => {
   const path = useLocation().pathname;
   const dispatch = useDispatch();
-  const {theme} = useSelector(state => state.theme)
+  const { theme } = useSelector((state) => state.theme);
   const { currentUser } = useSelector((state) => state.user);
   // console.log(currentUser)
   return (
@@ -41,13 +41,13 @@ const Header = () => {
           pill
           onClick={() => dispatch(toogleTheme())}
         >
-          {theme === 'light' ? <FaSun/> : <FaMoon/>}
+          {theme === "light" ? <FaSun /> : <FaMoon />}
         </Button>
         {currentUser ? (
           <Dropdown
             arrowIcon={false}
             inline
-            label={<Avatar alt="user" img={currentUser.profilePicture} />}
+            label={<Avatar className="rounded-full" alt="user" img={currentUser.profilePicture} />}
           >
             <Dropdown.Header>
               <span> {currentUser.username} </span>

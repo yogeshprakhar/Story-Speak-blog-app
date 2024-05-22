@@ -13,7 +13,7 @@ export const create = async (req, res, next) => {
     .join("-")
     .toLowerCase()
     .replace(/[^a-zA-Z0-9-]/g, "");
-    console.log("this is slug",slug)
+
   const newPost = new Post({
     ...req.body,
     slug,

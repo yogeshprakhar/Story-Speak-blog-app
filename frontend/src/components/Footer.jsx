@@ -1,9 +1,7 @@
 import { Footer } from "flowbite-react";
 import { Link } from "react-router-dom";
 import {
-  BsFacebook,
   BsInstagram,
-  BsTwitter,
   BsGithub,
   BsDribbble,
   BsLinkedin,
@@ -11,7 +9,7 @@ import {
 } from "react-icons/bs";
 export default function FooterCom() {
   return (
-    <Footer container className="border border-t-8 border-stone-500">
+    <Footer container className="">
       <div className="w-full max-w-7xl mx-auto">
         <div className="w-full sm:flex sm:items-center sm:justify-between">
           <div className="">

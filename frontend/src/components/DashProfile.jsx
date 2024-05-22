@@ -17,10 +17,8 @@ import {
   deleteUserFailure,
   deleteUserSuccess,
   deleteUserStart,
-  // signoutSuccess,
 } from "../redux/user/userSlice.js";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
-
 
 const DashProfile = () => {
   const { currentUser } = useSelector((state) => state.user);
@@ -207,7 +205,7 @@ const DashProfile = () => {
         <TextInput type="password" id="password" placeholder="********" />
         <Button type="submit">Update</Button>
       </form>
-      <div className="text-red-600 mt-4">
+      <div className="text-red-600 mt-4 flex justify-between">
         <span onClick={() => setShowModal(true)} className="cursor-pointer">
           Delete Account
         </span>

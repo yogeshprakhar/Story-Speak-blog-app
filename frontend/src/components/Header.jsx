@@ -54,9 +54,9 @@ const Header = () => {
         className="self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white"
       >
         <span className="px-2 py-1 rounded-s-lg bg-gradient-to-r from-zinc-800 via-stone-500">
-          Trauma
+          Story
         </span>
-        Blog
+        Speaks
       </Link>
       <form onSubmit={handleSubmit}>
         <TextInput
@@ -71,6 +71,9 @@ const Header = () => {
       <Button className="w-12 h-10 lg:hidden" color="gray" pill>
         <AiOutlineSearch />
       </Button>
+      <Link to="/search" className="text-xl text-stone-300 pl-48 font-bold ">
+        Posts
+      </Link>
       <div className="flex gap-9 md:order-2">
         <Button
           className="hidden md:inline"
@@ -85,11 +88,7 @@ const Header = () => {
             arrowIcon={false}
             inline
             label={
-              <Avatar
-                rounded
-                alt="user"
-                img={currentUser.profilePicture}
-              />
+              <Avatar rounded alt="user" img={currentUser.profilePicture} />
             }
           >
             <Dropdown.Header>

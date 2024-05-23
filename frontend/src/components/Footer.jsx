@@ -18,9 +18,9 @@ export default function FooterCom() {
               className="self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white"
             >
               <span className="px-2 py-1 rounded-s-lg bg-gradient-to-r from-zinc-800 via-stone-500">
-                Trauma
+                Story
               </span>
-              Blog
+              Speaks
             </Link>
           </div>
 
